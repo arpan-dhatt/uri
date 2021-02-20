@@ -12,8 +12,13 @@ struct ContentView: View {
     
     var body: some View {
         if viewModel.page == "Login"{
-            Text(viewModel.page)
-                .padding()
+            Login()
+        }
+        if viewModel.page == "LoginCustomer"{
+            CustomerOnboarding()
+        }
+        if viewModel.page == "LoginProvider"{
+            CustomerOnboarding()
         }
         if viewModel.page == "Consumer"{
             Text(viewModel.page)
