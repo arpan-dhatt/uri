@@ -26,7 +26,7 @@ struct InfoModel {
                 UserDefaults.standard.set(address, forKey: "address")
             }
         }
-        var domicileType: domicile {
+        var domicileType: String {
             didSet {
                 UserDefaults.standard.set(domicileType, forKey: "domicileType")
             }
@@ -69,7 +69,7 @@ struct InfoModel {
                 UserDefaults.standard.set(aboutMe, forKey: "aboutMeP")
             }
         }
-        var type: providerType {
+        var type: String {
             didSet {
                 UserDefaults.standard.set(type, forKey: "typeP")
             }
@@ -78,9 +78,19 @@ struct InfoModel {
     
 }
 
-enum domicile {
-    case house, apartment, condo
+enum domicile: String, CaseIterable, Identifiable{
+    case house = "house"
+    case apartment = "apartment"
+    case commercial = "commercial"
+    
+    var id: String{self.rawValue}
 }
-enum providerType {
-    case plumber, electrician, hvac, carpenter, audioVisual 
+enum providerType: String, CaseIterable, Identifiable {
+    case plumber = "plumber"
+    case electrician = "electrician"
+    case hvac = "hvac"
+    case carpenter = "carpenter"
+    case audioVisual = "audioVisual"
+    
+    var id: String{self.rawValue}
 }
