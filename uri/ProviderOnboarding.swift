@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProviderOnboarding: View {
     @EnvironmentObject var viewModel: ViewModel
+    @State var showImagePicker = false
+    @State var pickedImage: UIImage? = nil
     
     var body: some View {
         ZStack{
@@ -63,7 +65,7 @@ struct ProviderOnboarding: View {
                         HStack{
                             Text("About Me").font(.title2).bold()
                             Spacer()
-                            Image(systemName: "envelope.fill").font(.title)
+                            Image(systemName: "pencil.circle.fill").font(.title)
                         }.padding([.top,.leading, .trailing])
                         Divider()
                             TextField("ex: billy@gmail.com", text: $viewModel.provider.aboutMe).font(.title2).padding(.horizontal)
@@ -74,11 +76,37 @@ struct ProviderOnboarding: View {
                         HStack{
                             Text("Experience").font(.title2).bold()
                             Spacer()
-                            Image(systemName: "envelope.fill").font(.title)
+                            Image(systemName: "person.fill.checkmark").font(.title)
                         }.padding([.top,.leading, .trailing])
                         Divider()
                             TextField("ex: billy@gmail.com", text: $viewModel.provider.experience).font(.title2).padding(.horizontal)
                             Divider()
+                        }
+                        
+                        VStack{
+                            HStack{
+                                Text("Profile Picture").font(.title2).bold()
+                                Spacer()
+                                Image(systemName: "photo.fill").font(.title)
+                            }.padding([.top,.leading, .trailing])
+                                Divider()
+                            Button(action: {self.showImagePicker.toggle()}, label: {
+                                HStack{
+                                    Spacer()
+                                    Text("Pick Image").font(.title2)
+                                    Image(systemName: "plus").font(.title2)
+                                    Spacer()
+                                }.padding().background(Color(.blue)).foregroundColor(.white).cornerRadius(10).padding()
+                            })
+                            Divider()
+                            if pickedImage != nil {
+                                HStack{
+                                    Text("Selected Profile Picture").font(.title2).bold()
+                                    Spacer()
+                                }
+                                Image(uiImage: pickedImage!).resizable().scaledToFit().cornerRadius(10.0).padding()
+                                
+                            }
                         }
                         
                         VStack{
@@ -90,18 +118,20 @@ struct ProviderOnboarding: View {
                             Divider()
                             Picker(selection: $viewModel.provider.type, label: Text("")){
                                 ForEach(providerType.allCases){
-                                    Text($0.rawValue).font(.title2)
+                                    Text($0.rawValue).font(.title2).textCase(.uppercase)
                                 }
                             }
                             Divider()
                         }
                         
                     }
-                }.padding().background(Color.yellow).foregroundColor(Color.black).cornerRadius(15.0)
+                }.padding().background(Color.yellow).foregroundColor(Color.black).cornerRadius(15.0).sheet(isPresented: $showImagePicker, onDismiss: {self.showImagePicker = false}, content: {
+                    ImagePicker(image: $pickedImage, isShown: $showImagePicker)
+                })
                 
                 Button(action:{
                     withAnimation{
-                        
+                        viewModel.provider.profilePic = pickedImage!
                     }
                 }){
                     HStack{

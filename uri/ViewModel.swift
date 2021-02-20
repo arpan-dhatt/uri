@@ -19,7 +19,7 @@ class ViewModel: ObservableObject {
     @Published var onboardingPage: String = "1"
     @Published var user: InfoModel.User = InfoModel.User.init(name: "Arpan", email: "A@Gmail.com", address: "h streeet", domicileType: "apartment", phoneNumber: "911")
     @Published var provider: InfoModel.Provider = InfoModel.Provider.init(name:
-                                                                            "Vivy", email: "v@yahoo.com", address: "v street", experience: "none", phoneNumber: "119", aboutMe: "irrelevant", type: "audioVisual")
+                                                                            "Vivy", profilePic: UIImage(named: "biden")!, email: "v@yahoo.com", address: "v street", experience: "none", phoneNumber: "119", aboutMe: "irrelevant", type: "audioVisual")
     @Published var page: String = "Login"
     
     //User Defaults

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 struct InfoModel {
@@ -42,6 +43,11 @@ struct InfoModel {
         var name: String {
             didSet {
                 UserDefaults.standard.set(name, forKey: "nameP")
+            }
+        }
+        var profilePic: UIImage {
+            didSet {
+                UserDefaults.standard.set(profilePic, forKey: "profilePicP")
             }
         }
         var email: String {
