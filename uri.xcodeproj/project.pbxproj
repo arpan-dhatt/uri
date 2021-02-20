@@ -16,6 +16,11 @@
 		787B98D025E1A59F00631B5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98CF25E1A59F00631B5D /* ContentView.swift */; };
 		787B98D225E1A5A000631B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787B98D125E1A5A000631B5D /* Assets.xcassets */; };
 		787B98D525E1A5A000631B5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787B98D425E1A5A000631B5D /* Preview Assets.xcassets */; };
+		787B98DD25E1BB9F00631B5D /* ConsumerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98DC25E1BB9F00631B5D /* ConsumerDataSource.swift */; };
+		787B98DF25E1BBAD00631B5D /* ProviderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98DE25E1BBAD00631B5D /* ProviderDataSource.swift */; };
+		787B98E125E1BBBA00631B5D /* JobDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98E025E1BBBA00631B5D /* JobDataSource.swift */; };
+		787B98E325E1BBD300631B5D /* ConsumerHistoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98E225E1BBD300631B5D /* ConsumerHistoryDataSource.swift */; };
+		787B98E525E1BBDD00631B5D /* ProviderHistoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98E425E1BBDD00631B5D /* ProviderHistoryDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		787B98D125E1A5A000631B5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		787B98D425E1A5A000631B5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		787B98D625E1A5A000631B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		787B98DC25E1BB9F00631B5D /* ConsumerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerDataSource.swift; sourceTree = "<group>"; };
+		787B98DE25E1BBAD00631B5D /* ProviderDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDataSource.swift; sourceTree = "<group>"; };
+		787B98E025E1BBBA00631B5D /* JobDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDataSource.swift; sourceTree = "<group>"; };
+		787B98E225E1BBD300631B5D /* ConsumerHistoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerHistoryDataSource.swift; sourceTree = "<group>"; };
+		787B98E425E1BBDD00631B5D /* ProviderHistoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderHistoryDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,11 @@
 				4F2774A025E1AE7E00406A12 /* ViewModel.swift */,
 				4F2774A425E1B2B500406A12 /* Login.swift */,
 				4F2774A725E1B66500406A12 /* CustomerOnboarding.swift */,
+				787B98DC25E1BB9F00631B5D /* ConsumerDataSource.swift */,
+				787B98DE25E1BBAD00631B5D /* ProviderDataSource.swift */,
+				787B98E025E1BBBA00631B5D /* JobDataSource.swift */,
+				787B98E225E1BBD300631B5D /* ConsumerHistoryDataSource.swift */,
+				787B98E425E1BBDD00631B5D /* ProviderHistoryDataSource.swift */,
 			);
 			path = uri;
 			sourceTree = "<group>";
@@ -154,10 +169,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F2774A125E1AE7E00406A12 /* ViewModel.swift in Sources */,
+				787B98E325E1BBD300631B5D /* ConsumerHistoryDataSource.swift in Sources */,
+				787B98E525E1BBDD00631B5D /* ProviderHistoryDataSource.swift in Sources */,
 				787B98D025E1A59F00631B5D /* ContentView.swift in Sources */,
+				787B98DD25E1BB9F00631B5D /* ConsumerDataSource.swift in Sources */,
 				4F2774A825E1B66500406A12 /* CustomerOnboarding.swift in Sources */,
 				4F27749B25E1ABEA00406A12 /* MainView.swift in Sources */,
 				4F2774A525E1B2B500406A12 /* Login.swift in Sources */,
+				787B98E125E1BBBA00631B5D /* JobDataSource.swift in Sources */,
+				787B98DF25E1BBAD00631B5D /* ProviderDataSource.swift in Sources */,
 				787B98CE25E1A59F00631B5D /* uriApp.swift in Sources */,
 				4F27749E25E1AE6C00406A12 /* InfoModel.swift in Sources */,
 			);
