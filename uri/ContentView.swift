@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: ViewModel
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if viewModel.page == "Login"{
+            Text(viewModel.page)
+                .padding()
+        }
+        if viewModel.page == "Consumer"{
+            Text(viewModel.page)
+                .padding()
+        }
+        if viewModel.page == "Provider"{
+            Text(viewModel.page)
+                .padding()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(ViewModel())
     }
 }
