@@ -43,10 +43,10 @@ struct CustomerOrderThreeView: View {
                         if pickedVideo != nil {
                             VStack{
                             HStack{
-                                Text("Selected Profile Picture: \(pickedVideo!)").font(.title2).bold()
+//                                Text("Selected Profile Picture: \(pickedVideo!)").font(.title2).bold()
                                 Spacer()
                             }
-                            VideoPlayer(player: AVPlayer(url: pickedVideo!))
+                                VideoPlayer(player: AVPlayer(url: pickedVideo!)).scaledToFill()
                             }
                         }
                     }
