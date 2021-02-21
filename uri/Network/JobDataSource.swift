@@ -12,7 +12,7 @@ struct Job: Codable, Hashable {
     var consumer_id: String
     var provider_id: String
     var problem_category: String
-    var available_times: [[String]]
+    var available_times: [String]
     var location: String
     var images: [String]
     var video: String
@@ -25,9 +25,9 @@ struct Job: Codable, Hashable {
 class JobDataSource: ObservableObject {
     static var consumer_completed_jobs = JobDataSource(.consumer, endpoint: "consumer_completed_jobs")
     static var consumer_current_jobs = JobDataSource(.consumer, endpoint: "consumer_completed_jobs")
-    static var provider_completed_jobs = JobDataSource(.provider, endpoint: "consumer_completed_jobs")
-    static var provider_available_jobs = JobDataSource(.provider, endpoint: "consumer_completed_jobs")
-    static var provider_accepted_jobs = JobDataSource(.provider, endpoint: "consumer_completed_jobs")
+    static var provider_completed_jobs = JobDataSource(.provider, endpoint: "provider_completed_jobs")
+    static var provider_available_jobs = JobDataSource(.provider, endpoint: "provider_available_jobs")
+    static var provider_accepted_jobs = JobDataSource(.provider, endpoint: "provider_accepted_jobs")
     
     enum RequestType {
         case consumer
@@ -48,7 +48,7 @@ class JobDataSource: ObservableObject {
     private struct get_job_ResponseBody: Codable {
         var job_list: [Job]
     }
-    @Published var jobs = [String: Job]()
+    @Published var jobs = [Job]()
     
     init(_ requestType: RequestType, endpoint: String) {
         self.requestType = requestType
@@ -71,9 +71,9 @@ class JobDataSource: ObservableObject {
         print(request)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data else { return }
-            let job = try! JSONDecoder().decode(Job.self, from: data)
+            let jobResponse = try! JSONDecoder().decode(get_job_ResponseBody.self, from: data)
             DispatchQueue.main.async {
-                self.jobs[job.job_id] = job
+                self.jobs.append(contentsOf: jobResponse.job_list)
             }
         }
         task.resume()

@@ -107,6 +107,33 @@ class Postman {
         task.resume()
     }
     
+    private struct update_job_RequestData: Codable {
+        var job_id: String
+        var provider_id: String
+        var status: String
+    }
+    
+    static func update_job(job_id: String, provider_id: String, status: String) {
+        let url = URL(string: "\(NetworkConfiguration.url_root)update_job")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = try! JSONEncoder().encode(
+            update_job_RequestData(job_id: job_id, provider_id: provider_id, status: status)
+        )
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        print(request)
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let data = data else { return }
+            let response_data = try! JSONDecoder().decode(new_consumer_ResponseData.self, from: data)
+            DispatchQueue.main.async {
+                // todo
+                print(response_data)
+            }
+        }
+        task.resume()
+    }
+    
     static func convertImageToJPEGBase64(image: UIImage) -> String {
         image.jpegData(compressionQuality: 0.1)!.base64EncodedString()
     }
