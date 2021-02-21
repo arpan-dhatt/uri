@@ -86,6 +86,7 @@
 		787B98CC25E1A59F00631B5D /* uri */ = {
 			isa = PBXGroup;
 			children = (
+				787B98EC25E1EB4700631B5D /* Network */,
 				787B98CD25E1A59F00631B5D /* uriApp.swift */,
 				787B98CF25E1A59F00631B5D /* ContentView.swift */,
 				787B98D125E1A5A000631B5D /* Assets.xcassets */,
@@ -96,16 +97,8 @@
 				4F2774A025E1AE7E00406A12 /* ViewModel.swift */,
 				4F2774A425E1B2B500406A12 /* Login.swift */,
 				4F2774A725E1B66500406A12 /* CustomerOnboarding.swift */,
-				787B98DC25E1BB9F00631B5D /* ConsumerDataSource.swift */,
-				787B98DE25E1BBAD00631B5D /* ProviderDataSource.swift */,
-				787B98E025E1BBBA00631B5D /* JobDataSource.swift */,
-				787B98E225E1BBD300631B5D /* ConsumerHistoryDataSource.swift */,
-				787B98E425E1BBDD00631B5D /* ProviderHistoryDataSource.swift */,
 				4F2774AA25E1C64F00406A12 /* ProviderOnboarding.swift */,
 				6E9EC93A25E1D34400533117 /* ImagePicker.swift */,
-				787B98E625E1D46F00631B5D /* Postman.swift */,
-				787B98E825E1D51100631B5D /* NetworkConfiguration.swift */,
-				787B98EA25E1E05B00631B5D /* ImageDataSource.swift */,
 				6E9EC93D25E1D88000533117 /* ConsumerRoot.swift */,
 				6E4896DD25E1DE5C003A228B /* CustomerProfileView.swift */,
 			);
@@ -118,6 +111,21 @@
 				787B98D425E1A5A000631B5D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		787B98EC25E1EB4700631B5D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				787B98DC25E1BB9F00631B5D /* ConsumerDataSource.swift */,
+				787B98DE25E1BBAD00631B5D /* ProviderDataSource.swift */,
+				787B98E025E1BBBA00631B5D /* JobDataSource.swift */,
+				787B98E225E1BBD300631B5D /* ConsumerHistoryDataSource.swift */,
+				787B98E425E1BBDD00631B5D /* ProviderHistoryDataSource.swift */,
+				787B98E625E1D46F00631B5D /* Postman.swift */,
+				787B98E825E1D51100631B5D /* NetworkConfiguration.swift */,
+				787B98EA25E1E05B00631B5D /* ImageDataSource.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
