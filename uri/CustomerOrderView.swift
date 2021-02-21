@@ -17,6 +17,9 @@ struct CustomerOrderView: View {
         else if viewModel.customerOrderPage == "2" {
             CustomerOrderTwoView()
         }
+        else if viewModel.customerOrderPage == "3" {
+            CustomerOrderThreeView()
+        }
     }
 }
 

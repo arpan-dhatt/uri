@@ -1,5 +1,5 @@
 //
-//  ImagePicker.swift
+//  VideoPicker.swift
 //  uri
 //
 //  Created by user175571 on 2/20/21.
@@ -7,39 +7,43 @@
 
 import SwiftUI
 
-struct ImagePicker: UIViewControllerRepresentable {
+struct VideoPicker: UIViewControllerRepresentable {
     
-    @Binding var image: UIImage?
+    @Binding var video: URL?
     @Binding var isShown: Bool
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(isShown: $isShown, image: $image)
+        return Coordinator(isShown: $isShown, URL: $video)
     }
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<VideoPicker>) -> UIImagePickerController {
         let picker = UIImagePickerController()
         picker.delegate = context.coordinator
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary) ?? []
+        picker.mediaTypes = ["public.movie"]
+        picker.videoQuality = .typeHigh
         return picker
     }
     
     func updateUIViewController(_ uiViewController: UIImagePickerController,
-                                context: UIViewControllerRepresentableContext<ImagePicker>) {
+                                context: UIViewControllerRepresentableContext<VideoPicker>) {
         
     }
     
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         
-        @Binding var image: UIImage?
+        @Binding var video: URL?
         @Binding var isShown: Bool
         
-        init(isShown: Binding<Bool>, image: Binding<UIImage?>) {
+        init(isShown: Binding<Bool>, URL:Binding<URL?>) {
             _isShown = isShown
-            _image = image
+            _video = URL
         }
         
         func imagePickerController(_ picker: UIImagePickerController,
                                    didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+            video = info[.mediaURL] as? URL
             isShown.toggle()
         }
         
