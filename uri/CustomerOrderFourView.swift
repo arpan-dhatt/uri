@@ -13,7 +13,69 @@ struct CustomerOrderFourView: View {
     @State var pickedImage: UIImage? = nil
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            VStack{
+                
+                ScrollView{
+                    VStack{
+                        HStack{
+                            Text("Profile Picture").font(.title2).bold()
+                            Spacer()
+                            Image(systemName: "photo.fill").font(.title)
+                        }.padding([.top,.leading, .trailing])
+                            Divider()
+                        Button(action: {self.showImagePicker.toggle()}, label: {
+                            HStack{
+                                Spacer()
+                                Text("Pick Image").font(.title2)
+                                Image(systemName: "plus").font(.title2)
+                                Spacer()
+                            }.padding().background(Color(.blue)).foregroundColor(.white).cornerRadius(10).padding()
+                        })
+                        Divider()
+                        if pickedImage != nil {
+                            HStack{
+                                Text("Selected Profile Picture").font(.title2).bold()
+                                Spacer()
+                            }
+                            Image(uiImage: pickedImage!).resizable().scaledToFit().cornerRadius(10.0).padding()
+                            
+                        }
+                    }
+
+                }
+                
+                HStack{
+                    Spacer()
+                    Button(action:{
+                        withAnimation{
+                            viewModel.customerOrderPage = "3"
+                        }
+                    }){
+                        HStack{
+                            Image(systemName: "arrow.left")
+                            Text("Back")
+                        }.padding().background(Color.blue).cornerRadius(10.0).foregroundColor(.white).shadow(radius: 10.0)
+                    }
+                    Spacer()
+                    Button(action:{
+                        withAnimation{
+                            viewModel.customerOrderPage = "5"
+                        }
+                    }){
+                        HStack{
+                            Text("Next")
+                            Image(systemName: "arrow.right")
+                        }.padding().background(Color.blue).cornerRadius(10.0).foregroundColor(.white).shadow(radius: 10.0)
+                    }
+                    Spacer()
+                    
+                }
+
+            }.padding().sheet(isPresented: $showImagePicker, onDismiss: {self.showImagePicker = false}, content: {
+                ImagePicker(image: $pickedImage, isShown: $showImagePicker)
+            })
+        }
     }
 }
 
