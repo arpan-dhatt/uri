@@ -21,6 +21,10 @@ class ViewModel: ObservableObject {
     @Published var provider: InfoModel.Provider = InfoModel.Provider.init(name:
                                                                             "Vivy", profilePic: UIImage(named: "biden")!, email: "v@yahoo.com", address: "v street", experience: "none", phoneNumber: "119", aboutMe: "irrelevant", type: "audioVisual")
     @Published var page: String = "Login"
+    @Published var customerOrderPage: String = "1"
+    @Published var customerOrderType: String = "none"
+    @Published var customerOrderTimeslot: String = "none"
+    @Published var timeSlots = [["7:00", "Y"], ["8:00","S"], ["9:00", "N"], ["10:00","Y"]]
     
     //User Defaults
         init(){

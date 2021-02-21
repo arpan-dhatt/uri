@@ -9,22 +9,23 @@ import SwiftUI
 
 struct ConsumerRoot: View {
     @EnvironmentObject var viewModel: ViewModel
+    @State private var selection = 0
     
     var body: some View {
         ZStack{
-            TabView {
+            TabView(selection: $selection) {
                 Login()
                     .tabItem {
                         Label("Orders", systemImage: "newspaper")
-                    }
-                ProviderOnboarding()
+                    }.tag(0)
+                CustomerOrderView()
                     .tabItem {
                         Label("New", systemImage: "plus")
-                    }
+                    }.tag(1)
                 CustomerProfileView()
                     .tabItem {
                         Label("Profile", systemImage: "person.fill.checkmark")
-                    }
+                    }.tag(2)
             }
         }
     }
