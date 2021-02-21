@@ -20,9 +20,8 @@ struct ContentView: View {
         if viewModel.page == "LoginProvider"{
             ProviderOnboarding()
         }
-        if viewModel.page == "Consumer"{
-            Text(viewModel.page)
-                .padding()
+        if viewModel.page == "Customer"{
+            ConsumerRoot()
         }
         if viewModel.page == "Provider"{
             Text(viewModel.page)

@@ -79,7 +79,7 @@ struct CustomerOnboarding: View {
                 }
                 Button(action:{
                     withAnimation{
-                        
+                        viewModel.page = "Customer"
                     }
                 }){
                     HStack{
