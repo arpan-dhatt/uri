@@ -26,9 +26,9 @@ class ConsumerDataSource: ObservableObject {
     
     func loadConsumer(id: String) {
         if !consumers.keys.contains(id) {
-            let url = URL(string: "http://47.37.119.216:8000/get_consumer")!
+            let url = URL(string: "\(NetworkConfiguration.url_root)get_consumer")!
             var request = URLRequest(url: url)
-            request.httpMethod = "GET"
+            request.httpMethod = "POST"
             request.httpBody = try! JSONEncoder().encode(get_consumer_RequestBody(consumer_id: id))
             request.setValue("application/json", forHTTPHeaderField: "Accept")
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")

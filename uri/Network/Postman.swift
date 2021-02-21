@@ -108,6 +108,6 @@ class Postman {
     }
     
     static func convertImageToJPEGBase64(image: UIImage) -> String {
-        image.jpegData(compressionQuality: 0.25)!.base64EncodedString()
+        image.jpegData(compressionQuality: 0.1)!.base64EncodedString()
     }
 }
