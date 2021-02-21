@@ -14,7 +14,7 @@ struct CustomerOrderView: View {
         if viewModel.customerOrderPage == "1"{
             CustomerOrderViewIntro()
         }
-        if viewModel.customerOrderPage == "2" {
+        else if viewModel.customerOrderPage == "2" {
             CustomerOrderTwoView()
         }
     }
@@ -53,7 +53,9 @@ struct CustomerOrderViewIntro: View {
                 HStack{
                     Spacer()
                     Button(action:{
-                        
+                        withAnimation{
+                        viewModel.customerOrderPage = "2"
+                        }
                     }){
                         HStack{
                             Text("Next")

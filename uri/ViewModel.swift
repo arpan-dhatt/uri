@@ -23,6 +23,8 @@ class ViewModel: ObservableObject {
     @Published var page: String = "Login"
     @Published var customerOrderPage: String = "1"
     @Published var customerOrderType: String = "none"
+    @Published var customerOrderTimeslot: String = "none"
+    @Published var timeSlots = [["7:00", "Y"], ["8:00","S"], ["9:00", "N"], ["10:00","Y"]]
     
     //User Defaults
         init(){
