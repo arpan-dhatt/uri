@@ -37,6 +37,11 @@ struct InfoModel {
                 UserDefaults.standard.set(phoneNumber, forKey: "phoneNumber")
             }
         }
+        var id: String {
+            didSet{
+                UserDefaults.standard.set(id, forKey: "id")
+            }
+        }
     }
     
     struct Provider {
@@ -74,6 +79,11 @@ struct InfoModel {
         var type: String {
             didSet {
                 UserDefaults.standard.set(type, forKey: "typeP")
+            }
+        }
+        var id: String {
+            didSet{
+                UserDefaults.standard.set(id, forKey: "idP")
             }
         }
     }

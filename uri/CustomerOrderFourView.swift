@@ -15,11 +15,15 @@ struct CustomerOrderFourView: View {
     var body: some View {
         ZStack{
             VStack{
+                HStack{
+                    Text("Select a Picture").font(.title).fontWeight(.bold).padding()
+                    Spacer()
+                }
                 
                 ScrollView{
                     VStack{
                         HStack{
-                            Text("Profile Picture").font(.title2).bold()
+                            Text("Image of Issue").font(.title2).bold()
                             Spacer()
                             Image(systemName: "photo.fill").font(.title)
                         }.padding([.top,.leading, .trailing])
@@ -35,7 +39,7 @@ struct CustomerOrderFourView: View {
                         Divider()
                         if pickedImage != nil {
                             HStack{
-                                Text("Selected Profile Picture").font(.title2).bold()
+                                Text("Selected Picture Of Damage").font(.title2).bold().padding()
                                 Spacer()
                             }
                             Image(uiImage: pickedImage!).resizable().scaledToFit().cornerRadius(10.0).padding()
