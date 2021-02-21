@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct CustomerOrderThreeView: View {
     @EnvironmentObject var viewModel: ViewModel
@@ -17,7 +18,7 @@ struct CustomerOrderThreeView: View {
         ZStack{
             VStack{
                 HStack{
-                    Text("Select a video")
+                    Text("Select a video").font(.title).fontWeight(.bold).padding()
                     Spacer()
                 }
                 
@@ -27,7 +28,7 @@ struct CustomerOrderThreeView: View {
                         HStack{
                             Text("Videos").font(.title2).bold()
                             Spacer()
-                            Image(systemName: "photo.fill").font(.title)
+                            Image(systemName: "video.fill.badge.plus").font(.title)
                         }.padding([.top,.leading, .trailing])
                             Divider()
                         Button(action: {self.showVideoPicker.toggle()}, label: {
@@ -40,9 +41,12 @@ struct CustomerOrderThreeView: View {
                         })
                         Divider()
                         if pickedVideo != nil {
+                            VStack{
                             HStack{
                                 Text("Selected Profile Picture: \(pickedVideo!)").font(.title2).bold()
                                 Spacer()
+                            }
+                            VideoPlayer(player: AVPlayer(url: pickedVideo!))
                             }
                         }
                     }
