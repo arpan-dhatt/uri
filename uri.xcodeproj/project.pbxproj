@@ -22,6 +22,9 @@
 		6EA6176425E21B9D0016277A /* CustomerOrderThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6176325E21B9D0016277A /* CustomerOrderThreeView.swift */; };
 		6EA6176825E21D810016277A /* CustomerOrderFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6176725E21D810016277A /* CustomerOrderFourView.swift */; };
 		6EA6176E25E227000016277A /* CustomerOrderFinalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6176D25E227000016277A /* CustomerOrderFinalView.swift */; };
+		6EA6177325E22E920016277A /* ProviderRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6177225E22E920016277A /* ProviderRoot.swift */; };
+		6EA6177625E22ECE0016277A /* ProviderProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6177525E22ECE0016277A /* ProviderProfileView.swift */; };
+		6EA6177A25E233130016277A /* ProviderMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6177925E233130016277A /* ProviderMapView.swift */; };
 		783897FE25E1F5A8008BDD40 /* CustomerHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783897FD25E1F5A8008BDD40 /* CustomerHistoryView.swift */; };
 		787B98CE25E1A59F00631B5D /* uriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98CD25E1A59F00631B5D /* uriApp.swift */; };
 		787B98D025E1A59F00631B5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98CF25E1A59F00631B5D /* ContentView.swift */; };
@@ -53,6 +56,9 @@
 		6EA6176325E21B9D0016277A /* CustomerOrderThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerOrderThreeView.swift; sourceTree = "<group>"; };
 		6EA6176725E21D810016277A /* CustomerOrderFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerOrderFourView.swift; sourceTree = "<group>"; };
 		6EA6176D25E227000016277A /* CustomerOrderFinalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerOrderFinalView.swift; sourceTree = "<group>"; };
+		6EA6177225E22E920016277A /* ProviderRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRoot.swift; sourceTree = "<group>"; };
+		6EA6177525E22ECE0016277A /* ProviderProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileView.swift; sourceTree = "<group>"; };
+		6EA6177925E233130016277A /* ProviderMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderMapView.swift; sourceTree = "<group>"; };
 		783897FD25E1F5A8008BDD40 /* CustomerHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHistoryView.swift; sourceTree = "<group>"; };
 		787B98CA25E1A59F00631B5D /* uri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		787B98CD25E1A59F00631B5D /* uriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uriApp.swift; sourceTree = "<group>"; };
@@ -122,6 +128,9 @@
 				6EA6176D25E227000016277A /* CustomerOrderFinalView.swift */,
 				6EA6176025E2193B0016277A /* VideoPicker.swift */,
 				6E9EC93A25E1D34400533117 /* ImagePicker.swift */,
+				6EA6177225E22E920016277A /* ProviderRoot.swift */,
+				6EA6177525E22ECE0016277A /* ProviderProfileView.swift */,
+				6EA6177925E233130016277A /* ProviderMapView.swift */,
 			);
 			path = uri;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 				6EA6176425E21B9D0016277A /* CustomerOrderThreeView.swift in Sources */,
 				4F2774AB25E1C64F00406A12 /* ProviderOnboarding.swift in Sources */,
 				787B98D025E1A59F00631B5D /* ContentView.swift in Sources */,
+				6EA6177625E22ECE0016277A /* ProviderProfileView.swift in Sources */,
 				787B98DD25E1BB9F00631B5D /* ConsumerDataSource.swift in Sources */,
 				787B98E925E1D51100631B5D /* NetworkConfiguration.swift in Sources */,
 				787B98E725E1D46F00631B5D /* Postman.swift in Sources */,
@@ -237,7 +247,9 @@
 				4F2774A525E1B2B500406A12 /* Login.swift in Sources */,
 				6E9EC93E25E1D88000533117 /* ConsumerRoot.swift in Sources */,
 				787B98E125E1BBBA00631B5D /* JobDataSource.swift in Sources */,
+				6EA6177325E22E920016277A /* ProviderRoot.swift in Sources */,
 				787B98EB25E1E05B00631B5D /* ImageDataSource.swift in Sources */,
+				6EA6177A25E233130016277A /* ProviderMapView.swift in Sources */,
 				6E4896E525E1F777003A228B /* CustomerOrderTwoView.swift in Sources */,
 				787B98DF25E1BBAD00631B5D /* ProviderDataSource.swift in Sources */,
 				787B98CE25E1A59F00631B5D /* uriApp.swift in Sources */,

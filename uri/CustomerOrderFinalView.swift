@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomerOrderFinalView: View {
     @EnvironmentObject var viewModel: ViewModel
-    @State var additonalInfo: String = "Hello"
+    @State var additonalInfo: String = "Anything Else?"
     
     var body: some View {
         ZStack{
@@ -20,7 +20,15 @@ struct CustomerOrderFinalView: View {
                 }
                 
                 ScrollView{
-                    TextEditor(text: $additonalInfo)
+                    VStack{
+                        HStack{
+                            Text("Enter Any Additional Info Below:").font(.headline)
+                            Spacer()
+                        }
+                        TextEditor(text: $additonalInfo).foregroundColor(.gray)
+                    }.padding().background(Color.black).foregroundColor(.white).cornerRadius(10.0)
+                    
+                    
                 }
                 
                 HStack{
