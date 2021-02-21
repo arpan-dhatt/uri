@@ -45,11 +45,7 @@ struct InfoModel {
                 UserDefaults.standard.set(name, forKey: "nameP")
             }
         }
-        var profilePic: UIImage {
-            didSet {
-                UserDefaults.standard.set(profilePic, forKey: "profilePicP")
-            }
-        }
+        var profilePic: UIImage 
         var email: String {
             didSet {
                 UserDefaults.standard.set(email, forKey: "sourcesP")

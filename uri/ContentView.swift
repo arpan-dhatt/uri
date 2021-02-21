@@ -18,7 +18,7 @@ struct ContentView: View {
             CustomerOnboarding()
         }
         if viewModel.page == "LoginProvider"{
-            CustomerOnboarding()
+            ProviderOnboarding()
         }
         if viewModel.page == "Consumer"{
             Text(viewModel.page)
