@@ -23,6 +23,9 @@
 		787B98E125E1BBBA00631B5D /* JobDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98E025E1BBBA00631B5D /* JobDataSource.swift */; };
 		787B98E325E1BBD300631B5D /* ConsumerHistoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98E225E1BBD300631B5D /* ConsumerHistoryDataSource.swift */; };
 		787B98E525E1BBDD00631B5D /* ProviderHistoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98E425E1BBDD00631B5D /* ProviderHistoryDataSource.swift */; };
+		787B98E725E1D46F00631B5D /* Postman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98E625E1D46F00631B5D /* Postman.swift */; };
+		787B98E925E1D51100631B5D /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98E825E1D51100631B5D /* NetworkConfiguration.swift */; };
+		787B98EB25E1E05B00631B5D /* ImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B98EA25E1E05B00631B5D /* ImageDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		787B98E025E1BBBA00631B5D /* JobDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDataSource.swift; sourceTree = "<group>"; };
 		787B98E225E1BBD300631B5D /* ConsumerHistoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerHistoryDataSource.swift; sourceTree = "<group>"; };
 		787B98E425E1BBDD00631B5D /* ProviderHistoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderHistoryDataSource.swift; sourceTree = "<group>"; };
+		787B98E625E1D46F00631B5D /* Postman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postman.swift; sourceTree = "<group>"; };
+		787B98E825E1D51100631B5D /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		787B98EA25E1E05B00631B5D /* ImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,9 @@
 				787B98E425E1BBDD00631B5D /* ProviderHistoryDataSource.swift */,
 				4F2774AA25E1C64F00406A12 /* ProviderOnboarding.swift */,
 				6E9EC93A25E1D34400533117 /* ImagePicker.swift */,
+				787B98E625E1D46F00631B5D /* Postman.swift */,
+				787B98E825E1D51100631B5D /* NetworkConfiguration.swift */,
+				787B98EA25E1E05B00631B5D /* ImageDataSource.swift */,
 			);
 			path = uri;
 			sourceTree = "<group>";
@@ -181,10 +190,13 @@
 				4F2774AB25E1C64F00406A12 /* ProviderOnboarding.swift in Sources */,
 				787B98D025E1A59F00631B5D /* ContentView.swift in Sources */,
 				787B98DD25E1BB9F00631B5D /* ConsumerDataSource.swift in Sources */,
+				787B98E925E1D51100631B5D /* NetworkConfiguration.swift in Sources */,
+				787B98E725E1D46F00631B5D /* Postman.swift in Sources */,
 				4F2774A825E1B66500406A12 /* CustomerOnboarding.swift in Sources */,
 				4F27749B25E1ABEA00406A12 /* MainView.swift in Sources */,
 				4F2774A525E1B2B500406A12 /* Login.swift in Sources */,
 				787B98E125E1BBBA00631B5D /* JobDataSource.swift in Sources */,
+				787B98EB25E1E05B00631B5D /* ImageDataSource.swift in Sources */,
 				787B98DF25E1BBAD00631B5D /* ProviderDataSource.swift in Sources */,
 				787B98CE25E1A59F00631B5D /* uriApp.swift in Sources */,
 				4F27749E25E1AE6C00406A12 /* InfoModel.swift in Sources */,

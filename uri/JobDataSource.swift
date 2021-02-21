@@ -32,9 +32,9 @@ class JobDataSource: ObservableObject {
     
     func loadJob(id: String) {
         if !jobs.keys.contains(id) {
-            let url = URL(string: "http://47.37.119.216:8000/get_job")!
+            let url = URL(string: "\(NetworkConfiguration.url_root)get_job")!
             var request = URLRequest(url: url)
-            request.httpMethod = "GET"
+            request.httpMethod = "POST"
             request.httpBody = try! JSONEncoder().encode(get_job_RequestBody(job_id: id))
             request.setValue("application/json", forHTTPHeaderField: "Accept")
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")

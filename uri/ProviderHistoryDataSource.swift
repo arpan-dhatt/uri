@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class ProviderHistoryDataSource {
+class ProviderHistoryDataSource: ObservableObject {
     static var shared = ProviderHistoryDataSource()
     
     @Published var jobIds = [String]()
@@ -21,9 +21,9 @@ class ProviderHistoryDataSource {
     }
     
     func loadJobIds(provider_id: String) {
-        let url = URL(string: "http://47.37.119.216:8000/provider_job_history")!
+        let url = URL(string: "\(NetworkConfiguration.url_root)provider_job_history")!
         var request = URLRequest(url: url)
-        request.httpMethod = "GET"
+        request.httpMethod = "POST"
         request.httpBody = try! JSONEncoder().encode(provider_job_history_RequestBody(provider_id: provider_id))
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
