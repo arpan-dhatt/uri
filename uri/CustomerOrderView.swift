@@ -23,6 +23,9 @@ struct CustomerOrderView: View {
         else if viewModel.customerOrderPage == "4" {
             CustomerOrderFourView()
         }
+        else if viewModel.customerOrderPage == "5" {
+            CustomerOrderFinalView()
+        }
     }
 }
 
